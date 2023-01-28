@@ -16,8 +16,8 @@
 - Magisk installed
 
 ## Installation Guide & Download Link
-- Install this module via Magisk app or Recovery
-- Install any Motorola app or Moto Magisk Module which depends on this module
+- Install this module https://www.pling.com/p/1978575/ via Magisk app or Recovery
+- Install any Moto Magisk Module which depends on this module
 - Reboot
 
 ## Optionals
