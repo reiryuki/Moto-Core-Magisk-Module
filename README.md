@@ -34,6 +34,7 @@
 - Android 12.1 Nusantara ROM
 - Android 13 Nusantara ROM
 - Android 13 AOSP ROM
+- Android 13 CrDroid ROM
 
 ## Credits and contributors
 - https://t.me/viperatmos
