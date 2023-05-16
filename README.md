@@ -13,10 +13,10 @@
 ## Requirements
 - Not in Motorola ROM
 - Android 6 and up
-- Magisk installed
+- Magisk or KernelSU installed
 
 ## Installation Guide & Download Link
-- Install this module https://www.pling.com/p/1978575/ via Magisk app or Recovery
+- Install this module https://www.pling.com/p/1978575/ via Magisk app or KernelSU app or Recovery (unless you are using KernelSU)
 - Install any Moto Magisk Module which depends on this module
 - Reboot
 
