@@ -19,6 +19,7 @@
 - Install this module https://www.pling.com/p/1978575/ via Magisk app or KernelSU app or Recovery (unless you are using KernelSU)
 - Install any Moto Magisk Module which depends on this module
 - Reboot
+- If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt and reboot after
 
 ## Optionals
 - https://t.me/androidryukimodsdiscussions/60861
@@ -37,7 +38,6 @@
 - Android 13 CrDroid ROM
 
 ## Credits and contributors
-- https://t.me/viperatmos
 - https://t.me/androidryukimodsdiscussions
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 

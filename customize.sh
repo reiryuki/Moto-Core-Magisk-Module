@@ -108,11 +108,11 @@ fi
 DIR=/data/adb/modules/$MODID
 FILE=$DIR/module.prop
 if [ "`grep_prop data.cleanup $OPTIONALS`" == 1 ]; then
-  sed -i 's/^data.cleanup=1/data.cleanup=0/' $OPTIONALS
+  sed -i 's|^data.cleanup=1|data.cleanup=0|g' $OPTIONALS
   ui_print "- Cleaning-up $MODID data..."
   cleanup
   ui_print " "
-elif [ -d $DIR ] && ! grep -Eq "$MODNAME" $FILE; then
+elif [ -d $DIR ] && ! grep -q "$MODNAME" $FILE; then
   ui_print "- Different version detected"
   ui_print "  Cleaning-up $MODID data..."
   cleanup
@@ -163,8 +163,8 @@ fi
 # function
 hide_oat() {
 for APPS in $APP; do
-  export REPLACE="$REPLACE
-  `find $MODPATH/system -type d -name $APPS | sed "s|$MODPATH||"`/oat"
+  REPLACE="$REPLACE
+  `find $MODPATH/system -type d -name $APPS | sed "s|$MODPATH||g"`/oat"
 done
 }
 
