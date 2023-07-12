@@ -2,10 +2,18 @@
 
 ## DISCLAIMER
 - Motorola apps and blobs are owned by Motorola™.
-- The MIT license specified here is for the Magisk Module, not for Motorola apps and blobs.
+- The MIT license specified here is for the Magisk Module only, not for Motorola apps and blobs.
 
 ## Descriptions
 - System core framework library of Motorola ROM ported from Motorola XT2125 (nio) as a dependency of any Moto Magisk Module
+
+## For Moto App Porter
+- You can declare this line bellow in your app AndroidManifest.xml after `<application />` if you want to load classes and resources from this Moto Core:
+
+  `<uses-library android:name="moto" android:required="false" />`
+
+- Do not do above if your app have it's own library!
+- Do not white list the library with your own Magisk Module /system/etc/permissions/ because there might be a conflict.
 
 ## Sources
 - https://dumps.tadiphone.dev/dumps/motorola/nio msi-user-11-RRTS31.Q1-20-24-2-42a7c-release-keys
@@ -16,10 +24,10 @@
 - Magisk or KernelSU installed
 
 ## Installation Guide & Download Link
-- Install this module https://www.pling.com/p/1978575/ via Magisk app or KernelSU app or Recovery (unless you are using KernelSU)
+- Install this module https://www.pling.com/p/1978575/ via Magisk app or KernelSU app or Recovery if Magisk installed
 - Install any Moto Magisk Module which depends on this module
 - Reboot
-- If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt and reboot after
+- If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot after
 
 ## Optionals
 - https://t.me/androidryukimodsdiscussions/60861
