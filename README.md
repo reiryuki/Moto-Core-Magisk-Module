@@ -8,7 +8,7 @@
 - System core framework library of Motorola ROM ported from Motorola XT2125 (nio) as a dependency of any Moto Magisk Module
 
 ## For Moto App Porter
-- You can declare this line bellow in your app AndroidManifest.xml after `<application />` if you want to load classes and resources from this Moto Core:
+- You can declare this line bellow in your app AndroidManifest.xml after `<application />` if you want to load classes from this Moto Core:
 
   `<uses-library android:name="moto" android:required="false" />`
 
@@ -41,16 +41,14 @@
 
 ## Tested on
 - Android 12.1 Nusantara ROM
-- Android 13 Nusantara ROM
-- Android 13 AOSP ROM
-- Android 13 CrDroid ROM
+- Android 13 Nusantara ROM, AOSP ROM, & CrDroid ROM
 
 ## Credits and contributors
 - https://t.me/androidryukimodsdiscussions
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 
 ## Thanks for Donations
-- This Magisk Module is always will be free but you can however show us that you are care by making a donations:
+This Magisk Module is always will be free but you can however show us that you are care by making a donations:
 - https://ko-fi.com/reiryuki
 - https://www.paypal.me/reiryuki
 - https://t.me/androidryukimodsdiscussions/2619
