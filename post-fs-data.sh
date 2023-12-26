@@ -48,20 +48,18 @@ sepolicy_sh
 # list
 PKGS=`cat $MODPATH/package.txt`
 for PKG in $PKGS; do
-  magisk --denylist rm $PKG
+  magisk --denylist rm $PKG 2>/dev/null
+  magisk --sulist add $PKG 2>/dev/null
 done
-FILE=$MODPATH/tmp_file
-magisk --hide sulist 2>$FILE
-if [ "`cat $FILE`" == 'SuList is enforced' ]; then
+if magisk magiskhide sulist; then
   for PKG in $PKGS; do
-    magisk --hide add $PKG
+    magisk magiskhide add $PKG
   done
 else
   for PKG in $PKGS; do
-    magisk --hide rm $PKG
+    magisk magiskhide rm $PKG
   done
 fi
-rm -f $FILE
 
 # conflict
 rm -f /data/adb/modules/*/system/app/MotoSignatureApp/.replace
@@ -70,7 +68,7 @@ rm -f /data/adb/modules/*/system/app/MotoSignatureApp/.replace
 FILE=$MODPATH/cleaner.sh
 if [ -f $FILE ]; then
   . $FILE
-  rm -f $FILE
+  mv -f $FILE $FILE\.txt
 fi
 
 

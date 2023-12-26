@@ -30,10 +30,10 @@
 - If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot after
 
 ## Optionals
-- https://t.me/androidryukimodsdiscussions/60861
+- Global: https://t.me/androidryukimodsdiscussions/60861
 
 ## Troubleshootings
-- https://t.me/androidryukimodsdiscussions/29836
+- Global: https://t.me/androidryukimodsdiscussions/29836
 
 ## Support & Bug Report
 - https://t.me/androidryukimodsdiscussions/2618
