@@ -5,10 +5,10 @@
 - The MIT license specified here is for the Magisk Module only, not for Motorola apps and blobs.
 
 ## Descriptions
-- System core framework library of Motorola ROM ported from Motorola XT2125 (nio) as a dependency of any Moto Magisk Module
+- System core framework library of Motorola ROM ported from Motorola XT2125 (nio) as a dependency of any Moto Magisk Modules
 
 ## For Moto App Porter
-- You can declare this line bellow in your app AndroidManifest.xml after `<application />` if you want to load classes from this Moto Core:
+- You need to declare this line bellow in your app AndroidManifest.xml after `<application />` if you want to load classes from this Moto Core:
 
   `<uses-library android:name="moto" android:required="false" />`
 
@@ -17,6 +17,7 @@
 
 ## Sources
 - https://dumps.tadiphone.dev/dumps/motorola/nio msi-user-11-RRTS31.Q1-20-24-2-42a7c-release-keys
+- libmagiskpolicy.so: Kitsune Mask R65C33E4F
 
 ## Requirements
 - Not in Motorola ROM
@@ -26,8 +27,9 @@
 ## Installation Guide & Download Link
 - Install this module https://www.pling.com/p/1978575/ via Magisk app or KernelSU app or Recovery if Magisk installed
 - Install any Moto Magisk Module which depends on this module
+- If you are using KernelSU, you need to disable Unmount Modules by Default in KernelSU app settings
 - Reboot
-- If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot after
+- If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot afterwards
 
 ## Optionals
 - Global: https://t.me/androidryukimodsdiscussions/60861
@@ -39,18 +41,11 @@
 - https://t.me/androidryukimodsdiscussions/2618
 - If you don't do above, issues will be closed immediately
 
-## Tested on
-- Android 12.1 Nusantara ROM
-- Android 13 Nusantara ROM, AOSP ROM, & CrDroid ROM
-
-## Credits and contributors
+## Credits and Contributors
 - https://t.me/androidryukimodsdiscussions
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 
-## Thanks for Donations
-This Magisk Module is always will be free but you can however show us that you are care by making a donations:
-- https://ko-fi.com/reiryuki
-- https://www.paypal.me/reiryuki
+## Sponsors
 - https://t.me/androidryukimodsdiscussions/2619
 
 
