@@ -17,7 +17,7 @@
 
 ## Sources
 - https://dumps.tadiphone.dev/dumps/motorola/nio msi-user-11-RRTS31.Q1-20-24-2-42a7c-release-keys
-- libmagiskpolicy.so: Kitsune Mask R65C33E4F
+- libmagiskpolicy.so: Kitsune Mask R6687BB53
 
 ## Requirements
 - Not in Motorola ROM
