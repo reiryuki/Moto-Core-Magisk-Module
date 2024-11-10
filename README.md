@@ -21,7 +21,7 @@
 
 ## Requirements
 - Not in Motorola ROM
-- Android 6 and up
+- Android 6 (SDK 23) and up
 - Magisk or KernelSU installed
 
 ## Installation Guide & Download Link
@@ -32,10 +32,10 @@
 - If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot afterwards
 
 ## Optionals
-- Global: https://t.me/androidryukimodsdiscussions/60861
+- Global: https://t.me/ryukinotes/35
 
 ## Troubleshootings
-- Global: https://t.me/androidryukimodsdiscussions/29836
+- Global: https://t.me/ryukinotes/34
 
 ## Support & Bug Report
 - https://t.me/androidryukimodsdiscussions/2618
@@ -46,6 +46,6 @@
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 
 ## Sponsors
-- https://t.me/androidryukimodsdiscussions/2619
+- https://t.me/ryukinotes/25
 
 

@@ -64,6 +64,20 @@ else
   ui_print " "
 fi
 
+# recovery
+mount_partitions_in_recovery
+
+# magisk
+magisk_setup
+
+# path
+SYSTEM=`realpath $MIRROR/system`
+VENDOR=`realpath $MIRROR/vendor`
+PRODUCT=`realpath $MIRROR/product`
+SYSTEM_EXT=`realpath $MIRROR/system_ext`
+ODM=`realpath $MIRROR/odm`
+MY_PRODUCT=`realpath $MIRROR/my_product`
+
 # sepolicy
 FILE=$MODPATH/sepolicy.rule
 DES=$MODPATH/sepolicy.pfsd
@@ -109,7 +123,7 @@ if [ "`grep_prop data.cleanup $OPTIONALS`" == 1 ]; then
   ui_print " "
 elif [ -d $DIR ]\
 && [ "$PREVMODNAME" != "$MODNAME" ]; then
-  ui_print "- Different version detected"
+  ui_print "- Different module name is detected"
   ui_print "  Cleaning-up $MODID data..."
   cleanup
   ui_print " "
@@ -156,6 +170,31 @@ elif [ "`grep_prop permissive.mode $OPTIONALS`" == 2 ]; then
 fi
 
 # function
+file_check_system() {
+for FILE in $FILES; do
+  DESS="$SYSTEM$FILE $SYSTEM_EXT$FILE"
+  for DES in $DESS; do
+    if [ -f $DES ]; then
+      ui_print "- Detected"
+      ui_print "$DES"
+      rm -f $MODPATH/system*$FILE
+      ui_print " "
+    fi
+  done
+done
+}
+
+# check
+FILES="/*/MotoSignatureApp/MotoSignatureApp.apk 
+       /*/MotorolaSettingsProvider/MotorolaSettingsProvider.apk
+       /framework/com.motorola.frameworks.core.addon.jar
+       /framework/com.motorola.motosignature.jar
+       /framework/moto-checkin.jar
+       /framework/moto-settings.jar
+       /framework/moto.jar"
+file_check_system
+
+# function
 hide_oat() {
 for APP in $APPS; do
   REPLACE="$REPLACE
@@ -164,9 +203,12 @@ done
 }
 
 # hide
-APPS="`ls $MODPATH/system/priv-app` `ls $MODPATH/system/app`"
+APPS="`ls $MODPATH/system/priv-app`
+      `ls $MODPATH/system/app`"
 hide_oat
 
+# unmount
+unmount_mirror
 
 
 
