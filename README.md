@@ -8,11 +8,11 @@
 - System core framework library of Motorola ROM ported from Motorola XT2125 (nio) as a dependency of any Moto Magisk Modules
 
 ## For Moto App Porter
-- You need to declare this line bellow in your app AndroidManifest.xml after `<application />` if you want to load classes from this Moto Core:
+- You need to declare this line bellow in your app AndroidManifest.xml at `<application />` if you want to load classes from this Moto Core:
 
   `<uses-library android:name="moto" android:required="false" />`
 
-- Do not do above if your app have it's own library!
+- Do not do above if your app has it's own library!
 - Do not white list the library with your own Magisk Module /system/etc/permissions/ because there might be a conflict.
 
 ## Sources

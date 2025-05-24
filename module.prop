@@ -1,7 +1,7 @@
 id=MotoCore
 name=Moto Core
-version=v1.1
-versionCode=11
+version=v1.2
+versionCode=12
 author=Rei Ryuki the Fixer
 description=System core framework library of Motorola ROM ported from Motorola XT2125 (nio) as a dependency of any Moto Magisk Module for any Android 6 (SDK 23) and up non-Motorola ROM.
 
