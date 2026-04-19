@@ -67,6 +67,11 @@ if [ "$BOOTMODE" != true ]; then
     mount -o rw -t auto $BLOCK$DIR $DIR\
     || mount -o rw -t auto $BLOCK2$DIR $DIR
   fi
+  DIR=/klogdump
+  if [ -d $DIR ] && ! is_mounted $DIR; then
+    mount -o rw -t auto $BLOCK$DIR $DIR\
+    || mount -o rw -t auto $BLOCK2$DIR $DIR
+  fi
 fi
 }
 get_device() {
@@ -120,13 +125,17 @@ if [ ! -d $MIRROR$DIR ]; then
       ln -sf $MIRROR/system_root$DIR $MIRROR
     else
       ui_print "  ! Failed"
+      ui_print "    Try to reboot device first"
       rm -rf $MIRROR/system_root
+      abort
     fi
   else
     mkdir -p $MIRROR$DIR
     if ! mount_mirror $DIR $MIRROR$DIR; then
       ui_print "  ! Failed"
+      ui_print "    Try to reboot device first"
       rm -rf $MIRROR$DIR
+      abort
     fi
   fi
   ui_print " "
@@ -242,7 +251,8 @@ rm -rf /metadata/magisk/"$MODID"\
  /persist/magisk/"$MODID"\
  /data/unencrypted/magisk/"$MODID"\
  /cache/magisk/"$MODID"\
- /cust/magisk/"$MODID"
+ /cust/magisk/"$MODID"\
+ /klogdump/magisk/"$MODID"
 }
 
 

@@ -19,6 +19,53 @@
 - https://dumps.tadiphone.dev/dumps/motorola/nio msi-user-11-RRTS31.Q1-20-24-2-42a7c-release-keys
 - libmagiskpolicy.so: Kitsune Mask R6687BB53
 
+## Changelog
+
+v1.3
+- Abort installation if fail to mount mirror system
+
+v1.2
+- Fix Moto Launcher crashes in Android 15
+- Add moto-core_services.jar
+- Remove unneeded functions
+
+v1.1
+- Add Action button to clear apps caches
+- Fix bug in uninstall.sh
+
+v1.0
+- Fix bootloop while SUList activated
+- In-built files detections
+
+v0.9
+- Fix conflict with modules_update while installing via recovery if Magisk installed
+- Fix MagiskHide & SUList
+
+v0.8
+- Redirect /sdcard to /data/media/"$UID"
+- Add optional debug.log=1 for more detailed install log
+- Fix MagiskHide & SUList
+- Remove coreApp="true" & initOrder="99"
+
+v0.7
+- Move uninstall log to /data/media/0/..._uninstall.log
+- Fix Android 10 support
+- CURRENT_OR_SELF user handle
+- Redirect motsettings*.xml to accessible path
+
+v0.6
+- Using dex version 035 fix for Android Oreo and bellow
+- Fix sepolicy.rule issue in KernelSU
+- Save install log at /sdcard/..._recovery.log while installing via Recovery
+- Save uninstall log in /data/adb/modules/..._uninstall.log
+
+v0.5
+- Remove process="system" that causes bootloop in some devices
+- Set blacklist/whitelist
+
+v0.4
+- KernelSU support
+
 ## Requirements
 - Not in Motorola ROM
 - Android 6 (SDK 23) and up
@@ -26,7 +73,7 @@
 
 ## Installation Guide & Download Link
 - If you are using KernelSU, you need to disable Unmount Modules by Default in KernelSU app settings and install https://github.com/KernelSU-Modules-Repo/meta-overlayfs first
-- Install this module https://www.pling.com/p/1978575/ via Magisk app or Kitsune Mask app or KernelSU app or Apatch app or Recovery if Magisk or Kitsune Mask installed
+- Install this module via Magisk app or Kitsune Mask app or KernelSU app or Apatch app or Recovery if Magisk or Kitsune Mask installed
 - Install any Moto Magisk Module which depends on this module
 - Reboot
 - If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot afterwards
