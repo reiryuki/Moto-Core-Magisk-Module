@@ -7,7 +7,7 @@
 ## Descriptions
 System core framework library of Motorola ROM ported from Motorola XT2125 (nio) as a dependency of any Moto Magisk Modules
 
-## For Moto App Porter
+## For Moto Apps Porting
 - You need to declare this line bellow in your app AndroidManifest.xml at `<application />` if you want to load classes from this Moto Core:
 
   `<uses-library android:name="moto" android:required="false" />`
